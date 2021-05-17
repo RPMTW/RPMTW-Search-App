@@ -30,20 +30,24 @@ jobs:
   Web:
     runs-on: ubuntu-latest
     steps:
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
     - uses: actions/checkout@v2
     - uses: subosito/flutter-action@v1
       with:
-       flutter-version: '2.0.5'
+       channel: 'dev'
     - run: flutter pub get
-    - run: flutter build web
+    - run: flutter build web --release
     - run: rm -rf ${{ github.workspace }}/docs*
-    - run: cp -r ${{ github.workspace }}/web ${{ github.workspace }}/docs
+    - run: cp -r ${{ github.workspace }}/build/web ${{ github.workspace }}/docs
     
     - name: "Upload Artifact"
       uses: actions/upload-artifact@v1
       with:
         name: RPMTW-website-${{ github.run_number }}
-        path: ${{ github.workspace }}/web
+        path: ${{ github.workspace }}/build/web
     - name: "Update File"
       run: |
         git config --global user.name 'github-actions[bot]'
