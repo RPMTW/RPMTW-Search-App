@@ -35,7 +35,7 @@ jobs:
       with:
        channel: 'dev'
     - run: flutter pub get
-    - run: flutter build web
+    - run: flutter build web --release
     - run: rm -rf ${{ github.workspace }}/docs*
     - run: cp -r ${{ github.workspace }}/web ${{ github.workspace }}/docs
     
