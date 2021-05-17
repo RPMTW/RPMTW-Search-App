@@ -43,3 +43,9 @@ jobs:
       with:
         name: RPMTW-website-${{ github.run_number }}
         path: ${{ github.workspace }}/web
+    - name: "Update File"
+      run: |
+        git config --global user.email "rrt467778@gmail.com.com"
+        git config --global user.name "SiongSng"
+        git add ./assets
+        git commit -m "Update Website"
