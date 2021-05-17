@@ -38,7 +38,7 @@ jobs:
     - run: flutter build web --release
     - run: rm -rf ${{ github.workspace }}/docs*
     - run: cp -r ${{ github.workspace }}/build/web ${{ github.workspace }}/docs
-    
+    - run: sed -i 's/<base href="/">/<base href="/docs">/g' ${{ github.workspace }}/build/web
     - name: "Upload Artifact"
       uses: actions/upload-artifact@v1
       with:
