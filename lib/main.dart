@@ -66,7 +66,8 @@ class _MyApp extends State<MyApp> {
                   return Center(child: CircularProgressIndicator());
                 }
               },
-            )
+            ),
+                Text("Update ever 30 minutes")
           ])),
         ));
   }
