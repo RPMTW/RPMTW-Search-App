@@ -54,13 +54,13 @@ class _MyApp extends State<MyApp> {
                     if (data_==null){
                       data_=0;
                     }
-                    return Text("This mod is inclued in RPMTW, translated "+data_.toString()+"% of it.");
+                    return Text("模組已經在資料庫內了，目前翻譯進度 "+data_.toString()+"% ");
                   } else if(input_controller.text.isNotEmpty) {
                     return Text(
-                        "This mod is not inclued in RPMTW, but you can change that!");
+                        "模組不在資料庫內，歡迎協助翻譯，詳請請查看: https://www.rpmtw.ga 或者RPMTW官方Discord伺服器");
                   }else{
                     return Text(
-                        "Please type in mod name");
+                        "請輸入模組名稱");
                   }
                 } else {
                   return Center(child: CircularProgressIndicator());
