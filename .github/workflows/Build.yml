@@ -46,7 +46,17 @@ jobs:
         path: ${{ github.workspace }}/web
     - name: "Update File"
       run: |
-        git config --global user.email "rrt467778@gmail.com.com"
-        git config --global user.name "SiongSng"
-        git add ${{ github.workspace }}/docs
-        git commit -m "Update Website"
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'actions@users.noreply.github.com'
+        @"
+        protocol=https
+          host=github.com
+          username=github-actions[bot]
+          password=${{ secrets.GITHUB_TOKEN }}
+          "@ > .\1.txt
+          gc 1.txt|git credential-manager  store
+          ri .\1.txt -Force
+          git add ${{ github.workspace }}/docs
+          git commit -m "Update Website"
+          git push origin HEAD:${{ github.ref }}
+      shell: pwsh
