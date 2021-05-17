@@ -37,7 +37,7 @@ jobs:
     - run: flutter pub get
     - run: flutter build web --release
     - run: rm -rf ${{ github.workspace }}/docs*
-    - run: cp -r ${{ github.workspace }}/web ${{ github.workspace }}/docs
+    - run: cp -r ${{ github.workspace }}/build/web ${{ github.workspace }}/docs
     
     - name: "Upload Artifact"
       uses: actions/upload-artifact@v1
