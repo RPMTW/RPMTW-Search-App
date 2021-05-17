@@ -34,6 +34,7 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
        flutter-version: '2.0.5'
+       channel: 'beta'
     - run: flutter pub get
     - run: flutter build web
     - run: rm -rf ${{ github.workspace }}/docs*
