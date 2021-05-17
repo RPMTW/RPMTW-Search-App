@@ -39,8 +39,8 @@ jobs:
       with:
        channel: 'dev'
     - run: flutter pub get
-    - run: python ${{ github.workspace }}/replace.py
     - run: flutter build web --release
+    - run: python ${{ github.workspace }}/replace.py
     - run: rm -rf ${{ github.workspace }}/docs*
     - run: cp -r ${{ github.workspace }}/build/web ${{ github.workspace }}/docs
     
