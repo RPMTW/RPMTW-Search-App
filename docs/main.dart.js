@@ -58598,7 +58598,7 @@ s=1
 break
 case 1:return P.a2(q,r)}})
 return P.a3($async$la,r)},
-a1:function(a,b){var s=this,r=null,q=T.jQ(r,10,10),p=R.ac1(!1,!0,new D.rF(new S.hP(r,new X.Ac(new L.qr("assets/icon.png"),r,r,r,C.b3,r,C.bN,!1),r,r,r,r,C.ai),170,170,r),r,!0,r,r,r,r,r,r,r,r,r,s.ga68(),r,r,r),o=T.jQ(r,25,25),n=L.ac3(r,new F.fl(4,C.hI,C.hK),r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,"Mod name",r,r,r,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r)
+a1:function(a,b){var s=this,r=null,q=T.jQ(r,10,10),p=R.ac1(!1,!0,new D.rF(new S.hP(r,new X.Ac(new L.qr("assets/icon.png"),r,r,r,C.b3,r,C.bN,!1),r,r,r,r,C.ai),170,170,r),r,!0,r,r,r,r,r,r,r,r,r,s.ga68(),r,r,r),o=T.jQ(r,25,25),n=L.ac3(r,new F.fl(4,C.hI,C.hK),r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,"\u6a21\u7d44\u540d\u7a31\u6216ID",r,r,r,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r)
 q=H.a([q,p,o,new Z.vb(s.e,n,C.Ag,C.zQ,C.zR,C.Dn,new F.a2u(s),r),T.jQ(r,10,2),new B.ni(s.la(),new F.a2v(s),r,t.lH),L.oR("Update every 30 minutes",r,r,r,r,C.aL,r)],t.c)
 p=P.aD([null,0],t.st,t.S)
 return new S.tc(new M.uo(T.NY(M.mZ(C.b3,new B.BG(new G.Z3(!0,!0,!0,q,p),r,C.y,!1,r,!0,C.lg,!1,r,7,C.b9,C.yz,r,C.aw,r),r,r,r,1/0,r,r,1/0),r,r),r),"RPMTW",r)}}
