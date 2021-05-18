@@ -69,7 +69,7 @@ class _MyApp extends State<MyApp> {
                     ),
                     TextField(
                       decoration: InputDecoration(
-                          border: OutlineInputBorder(), hintText: 'Mod name'),
+                          border: OutlineInputBorder(), hintText: '模組名稱或ID'),
                       controller: input_controller,
                       onChanged: (text) {
                         setState(() {});
