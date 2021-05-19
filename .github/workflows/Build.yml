@@ -9,15 +9,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  #Linux:
-   # runs-on: ubuntu-latest
-    #steps:
-     # - uses: actions/checkout@v2
-      #- uses: subosito/flutter-action@v1
-       # with:
-        #  channel: beta
-      #- run: flutter config --enable-linux-desktop
-      #- run: flutter build linux
+  Linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: beta
+      - run: flutter config --enable-linux-desktop
+      - run: flutter build linux
+      - name: "Upload Artifact"
+        uses: actions/upload-artifact@v1
+        with:
+          name: RPMTW-website-${{ github.run_number }}
+          path: ${{ github.workspace }}/build/linux/x64/release/bundle/rpmtw_website   
   #Windows:
    # runs-on: windows-latest
     #steps:
@@ -47,9 +52,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: RPMTW-website-${{ github.run_number }}
-        path: |
-          ${{ github.workspace }}/build/web
-          ${{ github.workspace }}/build/linux/x64/release/bundle/rpmtw_website   
+        path: ${{ github.workspace }}/build/web  
       
     - name: "Update File"
       run: |
