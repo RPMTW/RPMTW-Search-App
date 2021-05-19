@@ -62,7 +62,7 @@ class _MyApp extends State<MyApp> {
                       onChanged: (text) {
                         setState(() {});
                       },style: TextStyle(color: Colors.white),decoration: InputDecoration(border: new OutlineInputBorder(
-                        borderSide: new BorderSide(color: Colors.blue)), ),
+                        borderSide: new BorderSide(color: Colors.blue)),hintText: "請輸入模組映射碼或CurseForge專案ID", ),
                     ),
                     SizedBox(
                       height: 10,
