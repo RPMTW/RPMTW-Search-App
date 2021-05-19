@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyApp extends State<MyApp> {
-  var title = "RPMTW";
+  var title = "RPMTW 模組翻譯查詢進度器";
   openURL() async {
     const url = 'https://github.com/RPMTW/';
     if (await canLaunch(url)) {
@@ -121,7 +121,7 @@ class _MyApp extends State<MyApp> {
                       },
                     ),
                     Text(
-                      "每三十分鐘更新資料一次",
+                      "每三十分鐘更新資料一次\n"+
                       "此網頁主要由 sunny.ayyl#2932 開發製作，詳情請查看 Github儲存庫。",
                       textAlign: TextAlign.center,
                     )
