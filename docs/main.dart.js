@@ -58712,10 +58712,10 @@ s=1
 break
 case 1:return P.a2(q,r)}})
 return P.a3($async$le,r)},
-a1:function(a,b){var s=this,r=null,q=T.jM(r,10,10),p=R.ach(!1,!0,new D.rF(new S.hP(r,new X.Ah(new L.qp("assets/icon.png"),r,r,r,C.b3,r,C.bN,!1),r,r,r,r,C.aj),170,170,r),r,!0,r,r,r,r,r,r,r,r,r,s.ga6a(),r,r,r),o=T.jM(r,25,25),n=L.acj(r,new F.fl(4,C.hH,C.hJ),r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,"\u6a21\u7d44\u540d\u7a31\u6216ID",r,r,r,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r)
-q=H.a([q,p,o,new Z.vc(s.e,n,C.Ep,C.DZ,C.E_,C.Hw,new F.a2M(s),r),T.jM(r,10,2),new B.ng(s.le(),new F.a2N(s),r,t.lH),L.oR("Update every 30 minutes",r,r,r,r,C.aN,r)],t._)
+a1:function(a,b){var s=this,r=null,q=T.jM(r,10,10),p=R.ach(!1,!0,new D.rF(new S.hP(r,new X.Ah(new L.qp("assets/icon.png"),r,r,r,C.b3,r,C.bN,!1),r,r,r,r,C.aj),170,170,r),r,!0,r,r,r,r,r,r,r,r,r,s.ga6a(),r,r,r),o=T.jM(r,25,25),n=L.acj(r,new F.fl(4,C.hH,C.hJ),r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,"\u6a21\u7d44\u6620\u5c04\u78bc\u6216CurseForge\u5c08\u6848ID",r,r,r,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r)
+q=H.a([q,p,o,new Z.vc(s.e,n,C.Ep,C.DZ,C.E_,C.Hw,new F.a2M(s),r),T.jM(r,10,10),new B.ng(s.le(),new F.a2N(s),r,t.lH),L.oR("\u6bcf\u4e09\u5341\u5206\u9418\u66f4\u65b0\u8cc7\u6599\u4e00\u6b21\n\u6b64\u7db2\u9801\u4e3b\u8981\u7531 sunny.ayyl#2932 \u958b\u767c\u88fd\u4f5c\uff0c\u8a73\u60c5\u8acb\u67e5\u770b Github\u5132\u5b58\u5eab\u3002",r,r,r,r,C.aN,r)],t._)
 p=P.aE([null,0],t.st,t.S)
-return new S.tc(new M.uo(T.NY(M.mX(C.b3,new B.BM(new G.Zb(!0,!0,!0,q,p),r,C.y,!1,r,!0,C.li,!1,r,7,C.b9,C.CI,r,C.aw,r),r,r,r,1/0,r,r,1/0),r,r),r),"RPMTW",r)}}
+return new S.tc(new M.uo(T.NY(M.mX(C.b3,new B.BM(new G.Zb(!0,!0,!0,q,p),r,C.y,!1,r,!0,C.li,!1,r,7,C.b9,C.CI,r,C.aw,r),r,r,r,1/0,r,r,1/0),r,r),r),"RPMTW \u6a21\u7d44\u7ffb\u8b6f\u67e5\u8a62\u9032\u5ea6\u5668",r)}}
 F.a2M.prototype={
 $1:function(a){this.a.b_(new F.a2L())},
 $S:37}
@@ -58732,7 +58732,7 @@ s=a.ab(t.ux)
 return L.oR(o,p,p,p,(s==null?C.dp:s).x.xR(1.3),C.aN,p)}else{o=t.ux
 if(r.a.a.length!==0){o=a.ab(o)
 return L.oR("\u6a21\u7d44\u4e0d\u5728\u8cc7\u6599\u5eab\u5167\uff0c\u6b61\u8fce\u5354\u52a9\u7ffb\u8b6f\uff0c\u8a73\u8acb\u8acb\u67e5\u770b: https://www.rpmtw.ga \u6216\u8005RPMTW\u5b98\u65b9Discord\u4f3a\u670d\u5668",p,p,p,(o==null?C.dp:o).x.xR(1.3),C.aN,p)}else{o=a.ab(o)
-return L.oR("\u8acb\u8f38\u5165\u6a21\u7d44\u540d\u7a31",p,p,p,(o==null?C.dp:o).x.xR(1.25),C.aN,p)}}}else return T.NY(new U.qG(p,p,p,p,p,p,p),p,p)},
+return L.oR("\u8acb\u8f38\u5165\u6a21\u7d44\u6620\u5c04\u78bc\u6216CurseForge\u6a21\u7d44\u5c08\u6848ID",p,p,p,(o==null?C.dp:o).x.xR(1.25),C.aN,p)}}}else return T.NY(new U.qG(p,p,p,p,p,p,p),p,p)},
 $S:334}
 Y.Zj.prototype={
 gl:function(a){return this.c.length},
