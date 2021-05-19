@@ -122,9 +122,6 @@ class _MyApp extends State<MyApp> {
                     ),
                     Text(
                       "每三十分鐘更新資料一次",
-                      textAlign: TextAlign.center,
-                    )
-                    Text(
                       "此網頁主要由 sunny.ayyl#2932 開發製作，詳情請查看 Github儲存庫。",
                       textAlign: TextAlign.center,
                     )
