@@ -61,7 +61,6 @@ class _MyApp extends State<MyApp> {
                       controller: input_controller,
                       onChanged: (text) {
                         setState(() {});
-                        git;
                       },style: TextStyle(color: Colors.white),decoration: InputDecoration(border: new OutlineInputBorder(
                         borderSide: new BorderSide(color: Colors.blue)), ),
                     ),
