@@ -45,6 +45,7 @@ class _MyApp extends State<MyApp> {
     return MaterialApp(
         title: title,
         home: Scaffold(
+          backgroundColor: Color.fromARGB(255, 90, 72, 207),
           body: Center(
               child: Container(
                   height: double.infinity,
@@ -60,8 +61,9 @@ class _MyApp extends State<MyApp> {
                       controller: input_controller,
                       onChanged: (text) {
                         setState(() {});
-                        ;
-                      },
+                        git;
+                      },style: TextStyle(color: Colors.white),decoration: InputDecoration(border: new OutlineInputBorder(
+                        borderSide: new BorderSide(color: Colors.blue)), ),
                     ),
                     SizedBox(
                       height: 10,
@@ -83,7 +85,7 @@ class _MyApp extends State<MyApp> {
                               textAlign: TextAlign.center,
                               style: DefaultTextStyle.of(context)
                                   .style
-                                  .apply(fontSizeFactor: 1.3),
+                                  .apply(fontSizeFactor: 1.3).apply(color: Colors.white),
                             );
                           } else if (input_controller.text.isNotEmpty) {
                             return Text(
@@ -91,7 +93,7 @@ class _MyApp extends State<MyApp> {
                               textAlign: TextAlign.center,
                               style: DefaultTextStyle.of(context)
                                   .style
-                                  .apply(fontSizeFactor: 1.3),
+                                  .apply(fontSizeFactor: 1.3).apply(color: Colors.white),
                             );
                           } else {
                             return Text(
@@ -99,7 +101,7 @@ class _MyApp extends State<MyApp> {
                               textAlign: TextAlign.center,
                               style: DefaultTextStyle.of(context)
                                   .style
-                                  .apply(fontSizeFactor: 1.25),
+                                  .apply(fontSizeFactor: 1.25).apply(color: Colors.white),
                             );
                           }
                         } else {
@@ -111,6 +113,9 @@ class _MyApp extends State<MyApp> {
                       "每三十分鐘更新資料一次\n"+
                       "此網頁主要由 sunny.ayyl#2932 開發製作，詳情請查看 Github儲存庫。",
                       textAlign: TextAlign.center,
+                      style: DefaultTextStyle.of(context)
+                          .style
+                          .apply(color: Colors.white),
                     )
                   ]))),
         ));
