@@ -121,7 +121,7 @@ class _MyApp extends State<MyApp> {
                       },
                     ),
                     Text(
-                      "Update every 30 minutes",
+                      "每三十分鐘更新資料一次",
                       textAlign: TextAlign.center,
                     )
                   ]))),
