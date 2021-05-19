@@ -42,12 +42,15 @@ jobs:
     - run: flutter build web --release
     - run: rm -rf ${{ github.workspace }}/docs*
     - run: cp -r ${{ github.workspace }}/build/web ${{ github.workspace }}/docs
-    
+    - run: flutter build linux --release
     - name: "Upload Artifact"
       uses: actions/upload-artifact@v1
       with:
         name: RPMTW-website-${{ github.run_number }}
-        path: ${{ github.workspace }}/build/web
+        path: |
+          ${{ github.workspace }}/build/web
+          ${{ github.workspace }}/build/linux/x64/release/bundle/rpmtw_website   
+      
     - name: "Update File"
       run: |
         git config --global user.name 'github-actions[bot]'
