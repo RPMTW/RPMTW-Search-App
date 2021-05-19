@@ -69,7 +69,7 @@ class _MyApp extends State<MyApp> {
                     ),
                     TextField(
                       decoration: InputDecoration(
-                          border: OutlineInputBorder(), hintText: '模組名稱或ID'),
+                          border: OutlineInputBorder(), hintText: '模組映射碼或CurseForge專案ID'),
                       controller: input_controller,
                       onChanged: (text) {
                         setState(() {});
@@ -78,7 +78,7 @@ class _MyApp extends State<MyApp> {
                     ),
                     SizedBox(
                       height: 10,
-                      width: 10,
+                      width: 2,
                     ),
                     FutureBuilder(
                       future: get_mod_list(),
@@ -108,7 +108,7 @@ class _MyApp extends State<MyApp> {
                             );
                           } else {
                             return Text(
-                              "請輸入模組名稱",
+                              "請輸入模組映射碼或CurseForge模組專案ID",
                               textAlign: TextAlign.center,
                               style: DefaultTextStyle.of(context)
                                   .style
@@ -122,6 +122,10 @@ class _MyApp extends State<MyApp> {
                     ),
                     Text(
                       "每三十分鐘更新資料一次",
+                      textAlign: TextAlign.center,
+                    )
+                    Text(
+                      "此網頁主要由 sunny.ayyl#2932 開發製作，詳情請查看 Github儲存庫。",
                       textAlign: TextAlign.center,
                     )
                   ]))),
