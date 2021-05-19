@@ -78,7 +78,7 @@ class _MyApp extends State<MyApp> {
                     ),
                     SizedBox(
                       height: 10,
-                      width: 2,
+                      width: 10,
                     ),
                     FutureBuilder(
                       future: get_mod_list(),
