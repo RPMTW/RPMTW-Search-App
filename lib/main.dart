@@ -45,24 +45,14 @@ class _MyApp extends State<MyApp> {
     return MaterialApp(
         title: title,
         home: Scaffold(
+          backgroundColor: Colors.grey,
           body: Center(
               child: Container(
                   height: double.infinity,
                   width: double.infinity,
                   alignment: Alignment.center,
                   child: ListView(children: <Widget>[
-                    SizedBox(
-                      width: 10,
-                      height: 10,
-                    ),
-                    InkWell(
-                      onTap: openURL,
-                      child: Ink.image(
-                        image: AssetImage('assets/icon.png'),
-                        height: 170,
-                        width: 170,
-                      ),
-                    ),
+                 
                     SizedBox(
                       width: 25,
                       height: 25,
