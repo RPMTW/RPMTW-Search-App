@@ -23,8 +23,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: RPMTW-website-${{ github.run_number }}
-          path: |
-            ${{ github.workspace }}/build/linux/x64/release/bundle/rpmtw_website   
+          path: ${{ github.workspace }}/build/linux/x64/release/bundle/rpmtw_website   
   #Windows:
    # runs-on: windows-latest
     #steps:
@@ -53,8 +52,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: RPMTW-website-${{ github.run_number }}
-        path: |
-          ${{ github.workspace }}/build/web
+        path: ${{ github.workspace }}/build/web
       
     - name: "Update File"
       run: |
