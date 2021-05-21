@@ -16,6 +16,7 @@ class MyApp extends StatefulWidget {
 
 class _MyApp extends State<MyApp> {
   var title = "RPMTW 模組翻譯查詢進度器";
+
   openURL() async {
     const url = 'https://github.com/RPMTW/';
     if (await canLaunch(url)) {
@@ -48,87 +49,101 @@ class _MyApp extends State<MyApp> {
           backgroundColor: Color.fromARGB(255, 90, 72, 207),
           body: Center(
               child: Container(
-                  height: double.infinity,
-                  width: double.infinity,
-                  alignment: Alignment.center,
-                  child: ListView(children: <Widget>[
-                 
-                    SizedBox(
-                      width: 25,
-                      height: 25,
-                    ),
-                    TextField(
-                      controller: input_controller,
-                      onChanged: (text) {
-                        setState(() {});
-                      },style: TextStyle(color: Colors.white),decoration: InputDecoration(border: new OutlineInputBorder(
-                        borderSide: new BorderSide(color: Colors.blue)),hintText: "請輸入模組映射碼或CurseForge專案ID", ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                      width: 10,
-                    ),
-                    FutureBuilder(
-                      future: get_mod_list(),
-                      builder: (BuildContext context,
-                          AsyncSnapshot<dynamic> snapshot) {
-                        if (snapshot.hasData) {
-                          if (snapshot.data[0]
-                              .contains(input_controller.text)) {
-                            var data_ = snapshot.data[1][input_controller.text];
-                            if (data_ == null) {
-                              data_ = 0;
-                            }
-                            return Text(
-                              "模組已經在資料庫內了，目前翻譯進度 " + data_.toString() + "% ",
-                              textAlign: TextAlign.center,
-                              style: DefaultTextStyle.of(context)
-                                  .style
-                                  .apply(fontSizeFactor: 1.3).apply(color: Colors.white),
-                            );
-                          } else if (input_controller.text.isNotEmpty) {
-                            return Text(
-                              "模組不在資料庫內，歡迎協助翻譯，詳請請查看: https://www.rpmtw.ga 或者RPMTW官方Discord伺服器",
-                              textAlign: TextAlign.center,
-                              style: DefaultTextStyle.of(context)
-                                  .style
-                                  .apply(fontSizeFactor: 1.3).apply(color: Colors.white),
-                            );
-                          } else {
-                            return Text(
-                              "請輸入模組映射碼或CurseForge模組專案ID",
-                              textAlign: TextAlign.center,
-                              style: DefaultTextStyle.of(context)
-                                  .style
-                                  .apply(fontSizeFactor: 1.25).apply(color: Colors.white),
-                            );
-                          }
-                        } else {
-                          return Center(child: CircularProgressIndicator());
-                        }
-                      },
-                    ),
-                    Text(
-                      "每三十分鐘更新資料一次\n"+
-                      "此網頁主要由 sunny.ayyl#2932 開發製作，詳情請查看 Github儲存庫。",
-                      textAlign: TextAlign.center,
-                      style: DefaultTextStyle.of(context)
-                          .style
-                          .apply(color: Colors.white),
-                    ),
-                Builder(builder: (context) {
-                  return TextButton(
-                    onPressed: () {
-                      showLicensePage(
-                        context: context,
-                      );
-                    },
-                    child: Text('Show Licenses'),
-                  );
-                },)
 
-
-                  ]))),
+                  child: Column(
+                    children: [
+                      Expanded(
+                        child: ListView(shrinkWrap: true,children: <Widget>[
+                          SizedBox(
+                            width: 25,
+                            height: 25,
+                          ),
+                          TextField(
+                            controller: input_controller,
+                            onChanged: (text) {
+                              setState(() {});
+                            },
+                            style: TextStyle(color: Colors.white),
+                            decoration: InputDecoration(
+                              border: new OutlineInputBorder(
+                                  borderSide: new BorderSide(color: Colors.blue)),
+                              hintText: "請輸入模組映射碼或CurseForge專案ID",
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                            width: 10,
+                          ),
+                          FutureBuilder(
+                            future: get_mod_list(),
+                            builder: (BuildContext context,
+                                AsyncSnapshot<dynamic> snapshot) {
+                              if (snapshot.hasData) {
+                                if (snapshot.data[0]
+                                    .contains(input_controller.text)) {
+                                  var data_ =
+                                      snapshot.data[1][input_controller.text];
+                                  if (data_ == null) {
+                                    data_ = 0;
+                                  }
+                                  return Text(
+                                    "模組已經在資料庫內了，目前翻譯進度 " +
+                                        data_.toString() +
+                                        "% ",
+                                    textAlign: TextAlign.center,
+                                    style: DefaultTextStyle.of(context)
+                                        .style
+                                        .apply(fontSizeFactor: 1.3)
+                                        .apply(color: Colors.white),
+                                  );
+                                } else if (input_controller.text.isNotEmpty) {
+                                  return Text(
+                                    "模組不在資料庫內，歡迎協助翻譯，詳請請查看: https://www.rpmtw.ga 或者RPMTW官方Discord伺服器",
+                                    textAlign: TextAlign.center,
+                                    style: DefaultTextStyle.of(context)
+                                        .style
+                                        .apply(fontSizeFactor: 1.3)
+                                        .apply(color: Colors.white),
+                                  );
+                                } else {
+                                  return Text(
+                                    "請輸入模組映射碼或CurseForge模組專案ID",
+                                    textAlign: TextAlign.center,
+                                    style: DefaultTextStyle.of(context)
+                                        .style
+                                        .apply(fontSizeFactor: 1.25)
+                                        .apply(color: Colors.white),
+                                  );
+                                }
+                              } else {
+                                return Center(child: CircularProgressIndicator());
+                              }
+                            },
+                          ),
+                          Text(
+                            "每三十分鐘更新資料一次\n" +
+                                "此網頁主要由 sunny.ayyl#2932 開發製作，詳情請查看 Github儲存庫。",
+                            textAlign: TextAlign.center,
+                            style: DefaultTextStyle.of(context)
+                                .style
+                                .apply(color: Colors.white),
+                          ),
+                          Builder(
+                            builder: (context) {
+                              return TextButton(
+                                onPressed: () {
+                                  showLicensePage(
+                                    context: context,
+                                  );
+                                },
+                                child: Text('Show Licenses'),
+                              );
+                            },
+                          ),
+                        ]),
+                      ),
+                    ],
+                  ))),
         ));
   }
 }
