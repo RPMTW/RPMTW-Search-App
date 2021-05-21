@@ -116,14 +116,17 @@ class _MyApp extends State<MyApp> {
                           .style
                           .apply(color: Colors.white),
                     ),
-                TextButton(
-                  onPressed: () {
-                    showLicensePage(
-                      context: context,
-                    );
-                  },
-                  child: Text('Show Licenses'),
-                ),
+                Builder(builder: (context) {
+                  return TextButton(
+                    onPressed: () {
+                      showLicensePage(
+                        context: context,
+                      );
+                    },
+                    child: Text('Show Licenses'),
+                  );
+                },)
+
 
                   ]))),
         ));
