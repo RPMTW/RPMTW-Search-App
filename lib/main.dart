@@ -115,7 +115,16 @@ class _MyApp extends State<MyApp> {
                       style: DefaultTextStyle.of(context)
                           .style
                           .apply(color: Colors.white),
-                    )
+                    ),
+                TextButton(
+                  onPressed: () {
+                    showLicensePage(
+                      context: context,
+                    );
+                  },
+                  child: Text('Show Licenses'),
+                ),
+
                   ]))),
         ));
   }
