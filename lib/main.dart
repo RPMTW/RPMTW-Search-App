@@ -45,8 +45,8 @@ class _MyApp extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: title,
+        theme: ThemeData.dark(),
         home: Scaffold(
-          backgroundColor: Color.fromARGB(255, 90, 72, 207),
           body: Center(
               child: Container(
 
@@ -94,7 +94,7 @@ class _MyApp extends State<MyApp> {
                                     style: DefaultTextStyle.of(context)
                                         .style
                                         .apply(fontSizeFactor: 1.3)
-                                        .apply(color: Colors.white),
+                                        
                                   );
                                 } else if (input_controller.text.isNotEmpty) {
                                   return Text(
@@ -103,7 +103,7 @@ class _MyApp extends State<MyApp> {
                                     style: DefaultTextStyle.of(context)
                                         .style
                                         .apply(fontSizeFactor: 1.3)
-                                        .apply(color: Colors.white),
+                                        
                                   );
                                 } else {
                                   return Text(
@@ -112,7 +112,7 @@ class _MyApp extends State<MyApp> {
                                     style: DefaultTextStyle.of(context)
                                         .style
                                         .apply(fontSizeFactor: 1.25)
-                                        .apply(color: Colors.white),
+                                        
                                   );
                                 }
                               } else {
@@ -126,7 +126,7 @@ class _MyApp extends State<MyApp> {
                             textAlign: TextAlign.center,
                             style: DefaultTextStyle.of(context)
                                 .style
-                                .apply(color: Colors.white),
+                                
                           ),
                           Builder(
                             builder: (context) {
